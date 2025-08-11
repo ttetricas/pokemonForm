@@ -1,36 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário com Checkbox</title>
-    <link rel="stylesheet" href="style.css"> 
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Escolha seus Pokémon Favoritos</title>
+<link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHT_6V7i5-f6NYvjVSjGCbGitfE2bLxFHzZg&s" type="image/x-icon">
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <h2>Escolha seus interesses:</h2>
+    <h2>Escolha seus Pokémon Favoritos</h2>
 
-    <form>
-        <label>
-            <input type="checkbox" name="interesses" value="tecnologia"> Tecnologia
-        </label><br>
+    <form id="pokemonForm">
+    <label for="trainer-name">Nome do Treinador:</label>
+    <input type="text" id="trainer-name" name="trainer-name" placeholder="Digite seu nome" />
 
-        <label>
-            <input type="checkbox" name="interesses" value="esportes"> Esportes
-        </label><br>
+    <label for="region">Região Favorita:</label>
+    <select id="region" name="region">
+        <option value="" disabled selected>Selecione a região</option>
+        <option value="kanto">Kanto</option>
+        <option value="johto">Johto</option>
+        <option value="hoenn">Hoenn</option>
+        <option value="sinnoh">Sinnoh</option>
+        <option value="unova">Unova</option>
+        <option value="kalos">Kalos</option>
+        <option value="alola">Alola</option>
+        <option value="galar">Galar</option>
+    </select>
 
-        <label>
-            <input type="checkbox" name="interesses" value="musica"> Música
-        </label><br>
+    <p>Selecione seus Pokémon favoritos:</p>
 
-        <label>
-            <input type="checkbox" name="interesses" value="filmes"> Filmes
-        </label><br>
+    <label>
+        <input type="checkbox" name="pokemon" value="pikachu" />
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu" />
+        Pikachu
+    </label>
 
-        <br>
+    <label>
+        <input type="checkbox" name="pokemon" value="bulbasaur" />
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur" />
+        Bulbasaur
+    </label>
+
+    <label>
+        <input type="checkbox" name="pokemon" value="charmander" />
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander" />
+        Charmander
+    </label>
+
+    <label>
+        <input type="checkbox" name="pokemon" value="squirtle" />
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle" />
+        Squirtle
+    </label>
+
+    <label>
+        <input type="checkbox" name="pokemon" value="eevee" />
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee" />
+        Eevee
+    </label>
+
+    <div class="buttons">
         <button type="submit">Enviar</button>
+        <button type="reset" id="btnLimpar">Limpar</button>
+    </div>
     </form>
+
+    <script>
+    const form = document.getElementById('pokemonForm');
+    const btnLimpar = document.getElementById('btnLimpar');
+
+    btnLimpar.addEventListener('click', function(event) {
+        const resposta = confirm('Tem certeza que deseja limpar o formulário?');
+        if (!resposta) {
+            event.preventDefault(); // cancela o reset
+        }
+    });
+
+    form.addEventListener('submit', function(event) {
+        const resposta = confirm('Tem certeza que deseja enviar o formulário?');
+        if (!resposta) {
+            event.preventDefault();
+        }
+    });
+    </script>
 
 </body>
 </html>
-

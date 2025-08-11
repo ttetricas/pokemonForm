@@ -1,34 +1,66 @@
 body {
-    font-family: Arial, sans-serif; 
-    background-color: #f4f4f4; 
-    text-align: left; 
-    padding: 20px; 
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2025/03/pokemon-tipo-1920x1080.jpg');
+    background-size: cover;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #3b4cca;
+    text-shadow: 1px 1px 2px #fff;
 }
 
 form {
-    background: white; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
-    display: inline-block; 
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 20px;
+    border-radius: 8px;
 }
 
 label {
-    display: block; 
-    margin: 10px 0; 
-    font-size: 18px; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+label img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+input[type="text"], select {
+    width: 95%;
+    padding: 7px 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    font-size: 1rem;
 }
 
 button {
-    background-color: #007BFF; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    border-radius: 5px; 
+    background: #ffcb05;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 3px #888;
 }
 
 button:hover {
-    background-color: #0056b3; 
+    background: #ffa500;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 10px;
 }
